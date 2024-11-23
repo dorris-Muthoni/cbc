@@ -4,8 +4,8 @@ from django.shortcuts import render
 def home(request):
     return render(request, 'index.html')
 
-def charts_apexcharts(request):
-    return render(request, 'charts-apexcharts.html')
+def enrollment_documents(request):
+    return render(request, 'enrollment_documents.html')
 
 def co_club(request):
     return render(request, 'co-club.html')

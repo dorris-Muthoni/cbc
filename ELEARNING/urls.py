@@ -1,9 +1,11 @@
 from django.urls import path
 from . import views
+from django.conf.urls.static import static 
+from django.conf import settings
 
 urlpatterns = [
     path('', views.home,name='my_home'),
-    path('charts-apexcharts/', views.charts_apexcharts,name='my_charts-apexcharts'),
+    path('enrollment_documents/', views.enrollment_documents,name='my_enrollment_documents'),
     path('co-club/', views.co_club,name='my_home'),
     path('co-events/', views.co_events,name='my_events'),
     path('pages-blank/', views.pages_blank,name='my_pages_blank'),
@@ -23,3 +25,6 @@ urlpatterns = [
     path('students-subjects/', views.students_subjects,name='my_students_subjects'),
     path('users-profile/', views.users_profile,name='my_users_profile'),
 ]
+
+# Add static files urlpatterns
+urlpatterns += static(settings.MEDIA_URL, document_root  = settings.MEDIA_ROOT)
