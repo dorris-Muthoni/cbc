@@ -4,13 +4,14 @@ from django.conf.urls.static import static
 from django.conf import settings
 
 urlpatterns = [
-    path('', views.home,name='my_home'),
+    path('', views.home,name='my_index'),
     path('enrollment_documents/', views.enrollment_documents,name='my_enrollment_documents'),
-    path('co-club/', views.co_club,name='my_home'),
-    path('co-events/', views.co_events,name='my_events'),
+    path('enrollment_form/', views.enrollment_form,name='my_enrollment_form'),
+    path('co-club/', views.co_club,name='my_co_club'),
+    path('co-events/', views.co_events,name='my_co_events'),
     path('pages-blank/', views.pages_blank,name='my_pages_blank'),
-    path('pages-contact/', views.pages_contact,name='pages_contact'),
-    path('pages-error-404/', views.pages_error_404,name='my_error_404'),
+    path('pages-contact/', views.pages_contact,name='my_pages_contact'),
+    path('pages-error-404/', views.pages_error_404,name='my_pages_error_404'),
     path('pages-faq/', views.pages_faq,name='my_pages_faq'),
     path('pages-login/', views.pages_login,name='my_pages_login'),
     path('pages-register/', views.pages_register,name='my_pages_register'),

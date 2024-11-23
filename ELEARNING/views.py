@@ -7,6 +7,9 @@ def home(request):
 def enrollment_documents(request):
     return render(request, 'enrollment_documents.html')
 
+def enrollment_form(request):
+    return render(request, 'enrollment_form.html')
+
 def co_club(request):
     return render(request, 'co-club.html')
 
@@ -17,7 +20,7 @@ def pages_blank(request):
     return render(request, 'pages-blank.html')
 
 def pages_contact(request):
-    return render(request, 'pages-contact.html')
+    return render(request, 'pages_contact.html')
 
 def pages_error_404(request):
     return render(request, 'pages-error-404.html')
